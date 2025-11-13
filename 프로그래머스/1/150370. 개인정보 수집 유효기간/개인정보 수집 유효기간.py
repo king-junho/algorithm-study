@@ -1,34 +1,21 @@
 def solution(today, terms, privacies):
     answer = []
-    today_year, today_month, today_day = map(int, today.split("."))
-    dic_term = {}
-    idx = 1
-    for term in terms:
-        a, b = term.split()
-        dic_term[a] = int(b)
-    for privacy in privacies:
-        date, people = privacy.split()
-        year, month, day = map(int, date.split("."))
-        if day - 1 > 0:
-            day -= 1
-        else:
-            day = 28
-            month -= 1
-        if month + dic_term[people] <= 12:
-            month += dic_term[people]
-        else:
-            year += (
-                (month + dic_term[people]) // 12
-                if (month + dic_term[people]) % 12 != 0
-                else (month + dic_term[people]) // 12 - 1
-            )
-            month = (month + dic_term[people]) % 12
-            if month == 0:
-                month = 12
-        exp_period = str(year) + f"{month:02d}" + f"{day:02d}"
-        today_str = str(today_year) + f"{today_month:02d}" + f"{today_day:02d}"
-        print(exp_period)
-        if int(exp_period) < int(today_str):
+
+    def to_days(date):
+        y, m, d = map(int, date.split("."))
+        return y * 12 * 28 + m * 28 + d
+
+    today_days = to_days(today)
+
+    term_dict = {}
+    for t in terms:
+        name, period = t.split()
+        term_dict[name] = int(period)
+
+    for idx, info in enumerate(privacies, 1):
+        date, people = info.split()
+        expire_days = to_days(date) + term_dict[people] * 28 - 1
+
+        if expire_days < today_days:
             answer.append(idx)
-        idx += 1
     return answer
