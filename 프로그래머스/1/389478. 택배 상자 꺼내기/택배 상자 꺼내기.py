@@ -1,37 +1,22 @@
 def solution(n, w, num):
-    def find_idx(n):
-        idx = 0
-        if n % w == 0:
-            if (n // w - 1) % 2 == 0:
-                idx = w
-            else:
-                idx = 1
-
-        else:
-            if (n // w) % 2 == 0:
-                idx = n % w
-            else:
-                idx = w - (n % w) + 1
-        return idx
-
     answer = 0
-    num_idx = find_idx(num)
-    n_idx = find_idx(n)
-    num_count = 0
-    n_count = 0
-
-    n_count = n // w + 1 if n % w != 0 else n // w
-    num_count = num // w + 1 if num % w != 0 else num // w
-
-    if n_count % 2 == 0:
-        if n_idx > num_idx:
-            answer = n_count - num_count
-        else:
-            answer = n_count - num_count + 1
+    num_idx = (num-1)%w if ((num-1)//w)%2==0 else w-1-(num-1)%w
+    n_idx = (n-1)%w if ((n-1)//w)%2==0 else w-1-(n-1)%w
+    
+    if n%w==0:
+        answer = ((n-1)//w) - ((num-1)//w) +1
     else:
-        if n_idx < num_idx:
-            answer = n_count - num_count
+        #맨 위 왼쪽부터 채울 때
+        if ((n-1)//w)%2==0:
+            if num_idx<=n_idx:
+                answer = ((n-1)//w) - ((num-1)//w) +1
+            else : 
+                answer = ((n-1)//w) - ((num-1)//w)
+        #맨 위 오른쪽부터 채울 때
         else:
-            answer = n_count - num_count + 1
-
+            if num_idx>=n_idx:
+                answer = ((n-1)//w) - ((num-1)//w) +1
+            else:
+                answer = ((n-1)//w) - ((num-1)//w)
+            
     return answer
