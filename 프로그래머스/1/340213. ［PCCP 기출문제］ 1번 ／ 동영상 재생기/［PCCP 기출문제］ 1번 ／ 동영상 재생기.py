@@ -1,41 +1,35 @@
+
+
 def solution(video_len, pos, op_start, op_end, commands):
-    answer = ""
-    video_m, video_s = map(int, video_len.split(":"))
-    video_time = video_m * 60 + video_s
+    answer = ''
+    
+    video_m,video_s = map(int,video_len.split(":"))
+    video_val = video_m*60+video_s
+    
+    pos_m,pos_s = map(int,pos.split(":"))
+    pos_val = pos_m*60+pos_s
 
-    pos_m, pos_s = map(int, pos.split(":"))
-    pos_time = pos_m * 60 + pos_s
+    op_start_m, op_start_s = map(int,op_start.split(":"))
+    op_start_val = op_start_m*60 + op_start_s
 
-    op_start_m, op_start_s = map(int, op_start.split(":"))
-    op_start_time = op_start_m * 60 + op_start_s
+    op_end_m, op_end_s = map(int,op_end.split(":"))
+    op_end_val = op_end_m*60 + op_end_s
+    
+    for command in commands:
+        if op_start_val<=pos_val<=op_end_val:
+            pos_val = op_end_val
+        if command == "next":
+            pos_val+=10
+            if pos_val>video_val:
+                pos_val=video_val
+        else:
+            pos_val-=10
+            if pos_val < 0 :
+                pos_val = 0
+        print(pos_val)
+    
+    if op_start_val<=pos_val<=op_end_val:
+        pos_val = op_end_val
+    answer = str(pos_val//60).zfill(2)+":"+str(pos_val%60).zfill(2)
 
-    op_end_m, op_end_s = map(int, op_end.split(":"))
-    op_end_time = op_end_m * 60 + op_end_s
-
-    for cmd in commands:
-        if pos_time >= op_start_time and pos_time <= op_end_time:
-            pos_time = op_end_time
-
-        if cmd == "next":
-            pos_time += 10
-            if pos_time > video_time:
-                pos_time = video_time
-        elif cmd == "prev":
-            pos_time -= 10
-            if pos_time < 0:
-                pos_time = 0
-    if pos_time >= op_start_time and pos_time <= op_end_time:
-        pos_time = op_end_time
-
-    if pos_time // 60 < 10:
-        pos_m = "0" + str(pos_time // 60)
-    else:
-        pos_m = str(pos_time // 60)
-
-    if pos_time % 60 < 10:
-        pos_s = "0" + str(pos_time % 60)
-    else:
-        pos_s = str(pos_time % 60)
-    answer = f"{pos_m}:{pos_s}"
     return answer
-
