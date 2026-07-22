@@ -1,9 +1,9 @@
 str = input()
-result = ""
-for s in str:
-    if s.islower():
-        result += s.upper()
-    else:
-        result += s.lower()
+result=""
 
+for s in str:
+    if s.isupper():
+        result+=s.lower()
+    else:
+        result+=s.upper()
 print(result)
