@@ -1,30 +1,23 @@
 def solution(mats, park):
-    def checkPlace():
-        for i in range(row, row + mat):
-            for j in range(col, col + mat):
-                if park[i][j] != "-1":
-                    return False
-        else:
-            return True
-
     answer = -1
-    empty_place_idx = []
-    width = len(park[0])
-    height = len(park)
-    for i in range(height):
-        for j in range(width):
-            if park[i][j] == "-1":
-                empty_place_idx.append([i, j])
-
+    mats.sort(reverse=True)
+    
     for mat in mats:
-        if answer >= mat:
-            continue
-        for row, col in empty_place_idx:
-            if row + mat > height or col + mat > width:
-                continue
-            if checkPlace():
-                answer = mat
-                break
-
+        for i in range(len(park)):
+            for j in range(len(park[0])):
+                if park[i][j]=="-1" and i<=len(park)-mat and j<=len(park[0])-mat:
+                    answer = solution2(park,i,j,mat)
+                    if answer!=-1:
+                        print(i,j)
+                        return answer
+    
     return answer
 
+
+def solution2(park,row,col,mat):
+    for i in range(row,row+mat):
+        for j in range(col, col+mat):
+            if park[i][j]!="-1":
+                return -1
+
+    return mat
