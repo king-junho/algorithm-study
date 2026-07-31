@@ -1,24 +1,20 @@
 def solution(bandage, health, attacks):
     answer = 0
-    answer = health
-    attack_idx = 0
-    sequence_count = 1
+    time=1
+    cur_health=health
+    #시전시간, 초당 회복, 추가 회복
+    t,x,y=bandage
 
-    for i in range(1, attacks[-1][0] + 1):
-        # 공격당했을 때
-        if attacks[attack_idx][0] == i:
-            answer -= attacks[attack_idx][1]
-            if answer <= 0:
-                answer = -1
-                break
-            attack_idx += 1
-            sequence_count = 0
-        else:
-            sequence_count += 1
-            if sequence_count == bandage[0]:
-                sequence_count=0
-                answer = min(answer + bandage[2]+bandage[1], health)
-            else:
-                answer = min(answer + bandage[1], health)
-
-    return answer
+    for i in range(len(attacks)-1):
+        cur_health-=attacks[i][1]
+        if cur_health <= 0 :
+            return -1
+        dur_time = attacks[i+1][0]-attacks[i][0]-1
+        recover = (dur_time*x) + (dur_time//t)*y
+        cur_health+= recover
+        if cur_health > health:
+            cur_health=health
+            
+    cur_health-=attacks[len(attacks)-1][1]
+    
+    return cur_health if cur_health>0 else -1
