@@ -1,35 +1,25 @@
 import java.util.ArrayList;
 import java.util.List;
-
 public class P018 {
-  private boolean[] visited;
-  private List<int[]> result;
-  private List<Integer> list;
-  private int N, M;
-
-  public void recursion(int num) {
-    if (num == M) {
-      result.add(list.stream().mapToInt(Integer::intValue).toArray());
+  public int[][] solution(int n, int m) {
+    List<int[]> result = new ArrayList<>();
+    int[] path = new int[m];
+    boolean[] visited = new boolean[n + 1];
+    backtrack(n, 0, path, visited, result);
+    return result.toArray(new int[result.size()][]);
+  }
+  public void backtrack(int n, int depth, int[] path,
+                         boolean[] visited, List<int[]> result) {
+    if (depth == path.length) {
+      result.add(path.clone());
       return;
     }
-    for (int i = 1; i <= N; i++) {
-      if (!visited[i]) {
-        visited[i] = true;
-        list.add(i);
-        recursion(num + 1);
-        visited[i] = false;
-        list.removeLast();
-      }
+    for (int number = 1; number <= n; number++) {
+      if (visited[number]) continue;
+      visited[number] = true;
+      path[depth] = number;
+      backtrack(n, depth + 1, path, visited, result);
+      visited[number] = false;
     }
-  }
-
-  public int[][] solution(int n, int m) {
-    N = n;
-    M = m;
-    visited = new boolean[n + 1];
-    list = new ArrayList<>();
-    result = new ArrayList<>();
-    recursion(0);
-    return result.toArray(new int[result.size()][]);
   }
 }
