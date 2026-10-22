@@ -14,7 +14,7 @@ class Solution {
         sum-=left;
         left++;
       }else{
-        if(right<n){
+        if(right<=n){
           right++;
           sum+=right;
         }
