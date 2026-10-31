@@ -73,7 +73,7 @@ Java로 카카오 채용 코딩테스트와 SSAFY SW 역량 평가를 준비한�
 | P068 | [가랏! RC카!](<개인문제풀이/P068. 가랏! RC카!/README.md>) | [SWEA1940](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PjMgaALgDFAUq) · 공개 연습 | 시뮬레이션·상태 유지 | D2 | 수정 통과 98점 | 10분(초기 풀이·수정시간 미보고) | O(N) · 보조 O(1) |
 | P069 | [모든 마을 사이의 이동 시간](<개인문제풀이/P069. 모든 마을 사이의 이동 시간/README.md>) | [개념 참고](https://cp-algorithms.com/graph/all-pair-shortest-path-floyd-warshall.html) · 독립 창작 | 플로이드–워셜 | 입문 | 통과 98점 | 17분 | O(N³) · O(N²) |
 | P070 | [회의 장소 정하기](<개인문제풀이/P070. 회의 장소 정하기/README.md>) | [개념 참고](https://cp-algorithms.com/graph/all-pair-shortest-path-floyd-warshall.html) · 독립 창작 | 플로이드–워셜 | 기본 응용 | 통과 98점 | 15분 | O(N³+M) · O(N²) |
-| P071 | [간식 꾸러미](<개인문제풀이/P071. 간식 꾸러미/README.md>) | [개념 참고](https://usaco.guide/silver/two-pointers) · 독립 창작 | 투 포인터 | D2 수준 추정 | 도움 후 수정 통과 97점 | 최초 30분·추가 미보고 | O(N) · O(N), 보조 O(1) |
+| P071 | [간식 꾸러미](<개인문제풀이/P071. 간식 꾸러미/README.md>) | [개념 참고](https://usaco.guide/silver/two-pointers) · 독립 창작 | 투 포인터 | D2 수준 추정 | 최초 97점·복습1 통과 97점 | 최초 30분·복습1 17분 | O(N) · O(N), 보조 O(1) |
 | P072 | [목표 무게의 두 상자](<개인문제풀이/P072. 목표 무게의 두 상자/README.md>) | [개념 참고](https://cses.fi/problemset/task/1640) · 독립 창작 | 투 포인터 | D2 수준 추정 | 도움 후 수정 통과 97점 | 최초 10분·추가 미보고 | O(N) · O(N), 보조 O(1) |
 | P073 | [두 개씩 선물 포장](<개인문제풀이/P073. 두 개씩 선물 포장/README.md>) | [개념 참고](https://cses.fi/problemset/task/1090) · 독립 창작 | 투 포인터·그리디 | D2 수준 추정 | 통과 95점 | 5분 | O(N log N) · O(N), 탐색 보조 O(1) |
 | P074 | [목표 합의 연속 구간](<개인문제풀이/P074. 목표 합의 연속 구간/README.md>) | [CSES Subarray Sums I](https://cses.fi/problemset/task/1660) · 공개 연습(입출력 변형) | 투 포인터 | D2 수준 추정 | 통과 97점 | 7분 | O(N) · O(N), 보조 O(1) |
