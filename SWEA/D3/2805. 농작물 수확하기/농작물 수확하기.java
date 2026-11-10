@@ -1,25 +1,6 @@
 import java.util.*;
 
 class Solution {
-  private static int harvest(int[][] map){
-    int sum=0;
-    int n = map.length;
-
-    for(int i=0; i<n; i++){
-      int size = i<=n/2 ? 2*i+1 : 2*(n-1-i)+1;
-      int mid = n/2;
-      int startIdx=Math.abs(mid-i);
-      int idx=0;
-
-      while(size>0){
-        sum+=map[i][startIdx+idx];
-        size--;
-        idx++;
-      }
-    }
-
-    return sum;
-  }
   public static void main(String[] args) throws Exception{
     /*
     1. 14:20 시작 ~ 14:51 종 료
@@ -47,16 +28,20 @@ class Solution {
 
     for(int test_case=1; test_case<=t; test_case++){
       int n = sc.nextInt();
-      int[][] map = new int[n][n];
+      int mid = n/2;
+      int sum=0;
 
-      for(int i=0; i<n; i++){
+      for(int row=0; row<n; row++){
         String line = sc.next();
-        for(int j=0; j<n; j++){
-          map[i][j] = line.charAt(j)-'0';
+        int start = Math.abs(mid-row);
+        int end = n-start;
+
+        for(int col=start; col<end; col++){
+          sum+=line.charAt(col)-'0';
         }
       }
 
-      sb.append("#").append(test_case).append(" ").append(harvest(map)).append("\n");
+      sb.append("#").append(test_case).append(" ").append(sum).append("\n");
     }
     System.out.print(sb.toString());
   }
