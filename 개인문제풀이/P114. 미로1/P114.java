@@ -1,0 +1,69 @@
+import java.awt.Point;
+import java.util.*;
+
+class Solution {
+    private static final int[] dr = {-1, 1, 0, 0};
+    private static final int[] dc = {0, 0, -1, 1};
+
+    private static int isEscape(int[][] map, Point startPoint, Point endPoint) {
+        int n = map.length;
+        boolean[][] visited = new boolean[n][n];
+        Queue<Point> queue = new ArrayDeque<>();
+        queue.offer(startPoint);
+
+        while (!queue.isEmpty()) {
+            Point current = queue.poll();
+            int row = current.y;
+            int col = current.x;
+
+            if (visited[row][col]) {
+                continue;
+            }
+            visited[row][col] = true;
+
+            for (int direction = 0; direction < 4; direction++) {
+                int nr = row + dr[direction];
+                int nc = col + dc[direction];
+                if (nr < 0 || nr >= n || nc < 0 || nc >= n) {
+                    continue;
+                }
+                if (map[nr][nc] == 3) {
+                    return 1;
+                }
+                if (!visited[nr][nc] && map[nr][nc] == 0) {
+                    queue.offer(new Point(nc, nr));
+                }
+            }
+        }
+        return 0;
+    }
+
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        StringBuilder sb = new StringBuilder();
+
+        for (int testCase = 1; testCase <= 10; testCase++) {
+            int t = sc.nextInt();
+            int[][] map = new int[16][16];
+            Point startPoint = new Point();
+            Point endPoint = new Point();
+
+            for (int i = 0; i < 16; i++) {
+                String line = sc.next();
+                for (int j = 0; j < 16; j++) {
+                    int value = line.charAt(j) - '0';
+                    if (value == 2) {
+                        startPoint = new Point(j, i);
+                    }
+                    if (value == 3) {
+                        endPoint = new Point(j, i);
+                    }
+                    map[i][j] = value;
+                }
+            }
+            sb.append("#").append(t).append(" ")
+                    .append(isEscape(map, startPoint, endPoint)).append("\n");
+        }
+        System.out.print(sb.toString());
+    }
+}
