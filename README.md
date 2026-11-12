@@ -14,8 +14,11 @@ Java로 카카오 채용 코딩테스트와 SSAFY SW 역량 평가를 준비한�
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | P001 | [숫자 비교하기](<개인문제풀이/P001. 숫자 비교하기/README.md>) | [프로그래머스 120807](https://school.programmers.co.kr/learn/courses/30/lessons/120807) · 일반 공개 연습 | 조건문 | 입문 | 로컬 검증 통과 · 92점 | 1분 | O(1) · O(1) |
 | P002 | [같은 숫자는 싫어](<개인문제풀이/P002. 같은 숫자는 싫어/README.md>) | [프로그래머스 12906](https://school.programmers.co.kr/learn/courses/30/lessons/12906) · 일반 공개 연습 | 배열·반복문 | 기초 | 로컬 검증 통과 · 91점 | 10분 | O(n) · O(n) |
+| P003 | [K번째수](problems/P003.md) | [프로그래머스 42748](https://school.programmers.co.kr/learn/courses/30/lessons/42748) · 일반 공개 연습 | 배열·정렬·인덱스 | 기초+ | 코드 검증 통과·학습 보류 76점 | 8분 | O(m n log(n+1)) · O(n+m) |
 | P004 | [실패율](<개인문제풀이/P004. 실패율/README.md>) | [카카오 2019 공채](https://school.programmers.co.kr/learn/courses/30/lessons/42889) · 공개 기출 | 집계·정렬 | 실전 입문 | 로컬 검증 통과 · 82점 | 20분 | O(M log(N+1)+N log(N+1)) · O(N) |
 | P005 | [캐시](<개인문제풀이/P005. 캐시/README.md>) | [카카오 공채](https://school.programmers.co.kr/learn/courses/30/lessons/17680) · 공개 기출 | 문자열·시뮬레이션 | 실전 기초 | 로컬 검증 통과 · 86점 | 20분 | O(MC) · O(C), C>0・문자열 길이 고정 |
+| P006 | [소수 찾기](<개인문제풀이/P006. 소수 찾기/README.md>) | [프로그래머스 42839](https://school.programmers.co.kr/learn/courses/30/lessons/42839) · 일반 공개 연습 | 완전탐색·소수 판별 | 중급 입문 | 해설 확인·재도전 예정(미통과) | — | — |
+| P007 | [네트워크](<개인문제풀이/P007. 네트워크/README.md>) | [프로그래머스 43162](https://school.programmers.co.kr/learn/courses/30/lessons/43162) · 일반 공개 연습 | 그래프·BFS | BFS 입문 | 복습1 보류(55점·해설 확인) | 복습1 14분 | 제출 O(N²) · O(N²) |
 | P008 | [연결된 방 찾기](<개인문제풀이/P008. 연결된 방 찾기/README.md>) | [공개 연습 참고](https://school.programmers.co.kr/learn/courses/30/lessons/43162) · 창작(기출 아님) | BFS 기본 탐색 | BFS 첫 연습 | 로컬 검증 통과 · 89점 | 20분 | O(V+E) · O(V) |
 | P009 | [방 방문 순서](<개인문제풀이/P009. 방 방문 순서/README.md>) | 창작(기출 아님) | BFS·방문 순서 | BFS 첫 연습 | 로컬 검증 통과 · 97점 | 약 10분 | O(V+E) · O(V) |
 | P010 | [목표 방까지 최소 이동](<개인문제풀이/P010. 목표 방까지 최소 이동/README.md>) | 창작(기출 아님) | BFS·최단거리 | BFS 기초+ | 로컬 검증 통과 · 93점 | 최초20분・추가수정 미보고 | O(V+E) · O(V) |
@@ -30,6 +33,7 @@ Java로 카카오 채용 코딩테스트와 SSAFY SW 역량 평가를 준비한�
 | P019 | [오름차순으로 번호 고르기](<개인문제풀이/P019. 오름차순으로 번호 고르기/README.md>) | [공개 연습 참고](https://school.programmers.co.kr/learn/courses/30/lessons/12977) · 창작(기출 아님) | 백트래킹·조합 | 백트래킹 기초 | 수정 후 통과94점 | 30분 | 시간상한 O(nC(n,m-1)+mK) · 공간O(n+m+mK), K=C(n,m) |
 | P020 | [합이 목표인 조합](<개인문제풀이/P020. 합이 목표인 조합/README.md>) | [공개 연습 참고](https://school.programmers.co.kr/learn/courses/30/lessons/12977) · 창작(기출 아님) | 백트래킹·조건부 조합 | 백트래킹 기초+ | 로컬 검증 통과 · 97점 | 15분 | O(mK) · O(m+mR), K=C(n,m), R=정답수 |
 | P021 | [타겟 넘버](<개인문제풀이/P021. 타겟 넘버/README.md>) | [프로그래머스 43165](https://school.programmers.co.kr/learn/courses/30/lessons/43165) · 일반 공개 연습 | 재귀 DFS·부호 선택 | 기초 응용 | 수정 후 통과94점 | 30분 | O(2^N) · O(N) |
+| P022 | [피로도](<개인문제풀이/P022. 피로도/README.md>) | [프로그래머스 87946](https://school.programmers.co.kr/learn/courses/30/lessons/87946) · 일반 공개 연습 | 백트래킹·순서 탐색 | 기초 응용 | 복습1 통과 96점·보류 해제 | 최초 40분·복습1 28분 | O(N·N!) · O(N) |
 | P023 | [영어 끝말잇기](<개인문제풀이/P023. 영어 끝말잇기/README.md>) | [프로그래머스 12981](https://school.programmers.co.kr/learn/courses/30/lessons/12981) · 일반 공개 연습 | 시뮬레이션·문자열·중복 검사 | 시뮬레이션 입문 | HashSet 개선·통과95점 | 15분 | 평균O(WL) · O(W) |
 | P024 | [공원 산책](<개인문제풀이/P024. 공원 산책/README.md>) | [프로그래머스 172928](https://school.programmers.co.kr/learn/courses/30/lessons/172928) · 일반 공개 연습 | 시뮬레이션·격자 이동 | 기초 응용 | 통과96점 | 미보고 | O(HW+QD) · O(1) |
 | P025 | [크레인 인형뽑기 게임](<개인문제풀이/P025. 크레인 인형뽑기 게임/README.md>) | [프로그래머스 64061](https://school.programmers.co.kr/learn/courses/30/lessons/64061) · 2019 카카오 겨울 인턴십 공개 기출 | 시뮬레이션·격자 상태 변경 | 기초 응용 | 통과98점 | 20분 | O(CN) · O(C) |
@@ -41,7 +45,9 @@ Java로 카카오 채용 코딩테스트와 SSAFY SW 역량 평가를 준비한�
 | P031 | [target 이상인 첫 위치](<개인문제풀이/P031. target 이상인 첫 위치/README.md>) | [개념 참고](https://cp-algorithms.com/num_methods/binary_search.html#lower-bound-and-upper-bound) · 독립 창작 | 이진 탐색·경계 탐색 | 기초 응용 | 힌트 후 통과97점 | 30분 | O(log N) · O(log N)(재귀) |
 | P032 | [달팽이 숫자](<개인문제풀이/P032. 달팽이 숫자/README.md>) | [SWEA1954](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PobmqAPoDFAUq) · 공개 연습 | 격자·시뮬레이션 | D2 | 통과95점 | 미보고 | O(N²) · O(N²)(배열 포함) |
 | P033 | [부분 수열의 합](<개인문제풀이/P033. 부분 수열의 합/README.md>) | [SWEA2817](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV7IzvG6EksDFAXB) · 공개 연습 | 완전탐색·재귀·백트래킹 | D3 | 통과93점 | 25분 | O(2^N) · O(N) |
+| P034 | [N-Queen](<개인문제풀이/P034. N-Queen/README.md>) | [SWEA2806](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV7GKs06AU0DFAXB) · 공개 연습 | 백트래킹·충돌 판정 | D3 | 보류·복습 후 재도전 | 미보고 | 미평가 |
 | P035 | [안전한 룩 배치](<개인문제풀이/P035. 안전한 룩 배치/README.md>) | [SWEA2806 참고](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV7GKs06AU0DFAXB) · 공개 연습 기반 창작 | 백트래킹·열 중복 방지 | N-Queen 전 단계(공식등급없음) | 수정 통과94점 | 미보고 | O(N²·N!) 상한 · O(N²)(판 포함) |
+| P036 | [체육복](<개인문제풀이/P036. 체육복/README.md>) | [프로그래머스42862](https://school.programmers.co.kr/learn/courses/30/lessons/42862) · 공개 연습·입출력 변형 | 그리디·인접 자원 배분 | 기초(학습용) | 복습1 통과 95점·보류 해제 | 복습1 20분 | O(n+L+R) · O(n) |
 | P037 | [창용 마을 무리의 개수](<개인문제풀이/P037. 창용 마을 무리의 개수/README.md>) | [SWEA7465](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWngfZVa9XwDFAQU) · 공개 연습 | 그래프·연결 관계 | D4 | 수정 통과91점 | 40분 | O(N+M) · O(N+M) |
 | P038 | [격자판의 숫자 이어 붙이기](<개인문제풀이/P038. 격자판의 숫자 이어 붙이기/README.md>) | [SWEA2819](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV7I5fgqEogDFAXB) · 공개 연습 | 격자 탐색·재귀·중복 제거 | D4 | 수정 통과98점 | 50분 | O(16·4^6) 상한 · O(U+6) |
 | P039 | [어디에 단어가 들어갈 수 있을까](<개인문제풀이/P039. 어디에 단어가 들어갈 수 있을까/README.md>) | [SWEA1979](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PuPq6AaQDFAUq) · 공개 연습 | 2차원 배열·연속 구간 | D2 | 통과97점 | 30분 | O(N²) · O(N²)(판 포함) |
@@ -49,12 +55,14 @@ Java로 카카오 채용 코딩테스트와 SSAFY SW 역량 평가를 준비한�
 | P041 | [상호의 배틀필드](<개인문제풀이/P041. 상호의 배틀필드/README.md>) | [SWEA1873](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5LyE7KD2ADFAXc) · 공개 연습 | 격자 시뮬레이션·명령 처리 | D3 | 수정 통과95점 | 최초40분·추가미보고 | O(HW+N·max(H,W)) · O(HW+N) |
 | P042 | [원재의 메모리 복구하기](<개인문제풀이/P042. 원재의 메모리 복구하기/README.md>) | [SWEA1289](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV19AcoKI9sCFAZN) · 공개 연습 | 문자열·그리디 | D3 | 통과94점 | 20분 | O(N²) · O(N) |
 | P043 | [계단을 오르는 방법](<개인문제풀이/P043. 계단을 오르는 방법/README.md>) | [개념 참고](https://cp-algorithms.com/dynamic_programming/intro-to-dp.html) · 독립 창작 | DP·경우의 수 | 첫 입문 | 통과96점 | 10분 | O(N) · O(N) |
+| P044 | [최소 동전 개수](<개인문제풀이/P044. 최소 동전 개수/README.md>) | [개념 참고](https://cp-algorithms.com/dynamic_programming/intro-to-dp.html) · 독립 창작 | DP·최솟값 | 기초 | 복습1 계산식 개선안 검증·해설 확인(초안 77점) | 복습1 15분 | 제출 O(1) · O(1), 출력 버퍼 별도 |
 | P045 | [최소 비용으로 도착하기](<개인문제풀이/P045. 최소 비용으로 도착하기/README.md>) | [개념 참고](https://cp-algorithms.com/dynamic_programming/intro-to-dp.html) · 독립 창작 | 2차원 DP·최소 비용 | 기초 | 통과93점 | 20분 | O(NM) · O(NM) |
 | P046 | [이웃하지 않게 보상 고르기](<개인문제풀이/P046. 이웃하지 않게 보상 고르기/README.md>) | [개념 참고](https://cp-algorithms.com/dynamic_programming/intro-to-dp.html) · 독립 창작 | 1차원 DP·최댓값 | 기초 | O(N) 개선·통과85점 | 미보고 | O(N) · O(N) |
+| P047 | [휴가 계획](<개인문제풀이/P047. 휴가 계획/README.md>) | [AtCoder DP C](https://atcoder.jp/contests/dp/tasks/dp_c?lang=en) · 공개 교육용 대회·입출력 변형 | DP·마지막 선택 상태 | 기초 응용 | 복습1 통과 94점·보류 해제 | 복습1 11분 | O(N) · O(N) |
 | P048 | [마을 연결하기](<개인문제풀이/P048. 마을 연결하기/README.md>) | [개념 참고](https://cp-algorithms.com/graph/mst_kruskal_with_dsu.html) · 독립 창작 | MST·Prim | 입문 | 통과 93점 | 15분 | O(E log E) · O(V+E) |
 | P049 | [통신망 설치](<개인문제풀이/P049. 통신망 설치/README.md>) | [개념 참고](https://cp-algorithms.com/graph/mst_prim.html) · 독립 창작 | MST·Prim·연결 판정 | 기초 | 통과 94점 | 15분 | O(V+E log(E+1)) · O(V+E) |
 | P050 | [예산 안에서 학교 연결하기](<개인문제풀이/P050. 예산 안에서 학교 연결하기/README.md>) | [개념 참고](https://cp-algorithms.com/graph/mst_prim.html) · 독립 창작 | MST·예산 판정 | 기초 | 통과 95점 | 20분 | O(V+E log(E+1)) · O(V+E) |
-| P051 | [긴급 보급 상자](<개인문제풀이/P051. 긴급 보급 상자/README.md>) | 독립 창작 · 문제 문서의 난이도 참고 링크 | 백트래킹·부분집합 | 학습용 D3 상당 | 수정 통과 91점 · 재도전 예정 | 미보고 | O(2^N) · O(N) |
+| P051 | [긴급 보급 상자](<개인문제풀이/P051. 긴급 보급 상자/README.md>) | 독립 창작 · 문제 문서의 난이도 참고 링크 | 백트래킹·부분집합 | 학습용 D3 상당 | 최초 통과 91점·복습1 해설 후 재도전 보류 | 미보고 | O(2^N) · O(N) |
 | P052 | [목표 금액 만들기](<개인문제풀이/P052. 목표 금액 만들기/README.md>) | 독립 창작 · 문제 문서의 난이도 참고 링크 | 백트래킹·경우의 수 | 학습용 D3 상당 | 통과 96점 | 15분 | O(2^N) · O(N) |
 | P053 | [가장 짧은 배송 구간](<개인문제풀이/P053. 가장 짧은 배송 구간/README.md>) | 독립 창작 · 문제 문서의 난이도 참고 링크 | 투포인터·가변 구간 | 학습용 D3 상당 | 수정 통과 93점 | 1시간 | O(N) · O(N) |
 | P054 | [가장 많은 자원이 있는 구역](<개인문제풀이/P054. 가장 많은 자원이 있는 구역/README.md>) | 독립 창작 · 문제 문서의 참고 링크 | DFS·구역 합산 | 학습용 D3 상당 | 수정 통과 95점 | 약13분(주석 기준) | O(HW) · O(HW) |
@@ -70,6 +78,7 @@ Java로 카카오 채용 코딩테스트와 SSAFY SW 역량 평가를 준비한�
 | P064 | [보급소를 거쳐 배송하기](<개인문제풀이/P064. 보급소를 거쳐 배송하기/README.md>) | 독립 창작 · 문제 문서의 참고 링크 | 다익스트라·필수 경유 | 기초 응용 | 수정 통과 96점 | 30분(초기 풀이·수정시간 미보고) | O(N+M log(N+1)) · O(N+M) |
 | P065 | [연구망 품질 높이기](<개인문제풀이/P065. 연구망 품질 높이기/README.md>) | 독립 창작 · 문제 문서의 참고 링크 | 최대 신장 트리·Prim | 학습용 D3 상당 | 통과 97점 | 12분 | O(N+M log(M+1)) · O(N+M) |
 | P066 | [탐사 차량의 통행료](<개인문제풀이/P066. 탐사 차량의 통행료/README.md>) | 독립 창작 · 문제 문서의 참고 링크 | 격자 다익스트라 | 학습용 D3~D4 상당 | 수정 통과 94점 | 31분(좌표 재수정 추가시간 미보고) | O(HW log(HW+1)) · O(HW) |
+| P067 | [파스칼의 삼각형](<개인문제풀이/P067. 파스칼의 삼각형/README.md>) | [SWEA2005](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5P0-h6Ak4DFAUq) · 공개 연습 | 배열·이전 행 활용 | D2 | 복습1 통과 91점·보류 해제 | 복습1 13분 | O(N²) · O(N²) |
 | P068 | [가랏! RC카!](<개인문제풀이/P068. 가랏! RC카!/README.md>) | [SWEA1940](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PjMgaALgDFAUq) · 공개 연습 | 시뮬레이션·상태 유지 | D2 | 수정 통과 98점 | 10분(초기 풀이·수정시간 미보고) | O(N) · 보조 O(1) |
 | P069 | [모든 마을 사이의 이동 시간](<개인문제풀이/P069. 모든 마을 사이의 이동 시간/README.md>) | [개념 참고](https://cp-algorithms.com/graph/all-pair-shortest-path-floyd-warshall.html) · 독립 창작 | 플로이드–워셜 | 입문 | 통과 98점 | 17분 | O(N³) · O(N²) |
 | P070 | [회의 장소 정하기](<개인문제풀이/P070. 회의 장소 정하기/README.md>) | [개념 참고](https://cp-algorithms.com/graph/all-pair-shortest-path-floyd-warshall.html) · 독립 창작 | 플로이드–워셜 | 기본 응용 | 통과 98점 | 15분 | O(N³+M) · O(N²) |
@@ -79,12 +88,16 @@ Java로 카카오 채용 코딩테스트와 SSAFY SW 역량 평가를 준비한�
 | P074 | [목표 합의 연속 구간](<개인문제풀이/P074. 목표 합의 연속 구간/README.md>) | [CSES Subarray Sums I](https://cses.fi/problemset/task/1660) · 공개 연습(입출력 변형) | 투 포인터 | D2 수준 추정 | 통과 97점 | 7분 | O(N) · O(N), 보조 O(1) |
 | P075 | [중복 없는 재생 구간](<개인문제풀이/P075. 중복 없는 재생 구간/README.md>) | [CSES Playlist](https://cses.fi/problemset/task/1141) · 공개 연습(입출력 변형) | 투 포인터 응용 | D3 수준 추정 | 도움 후 수정 통과 96점 | 최초 20분·추가 미보고 | 평균 O(N) · O(N) |
 | P076 | [종류 제한 진열대](<개인문제풀이/P076. 종류 제한 진열대/README.md>) | [개념 참고](https://cses.fi/problemset/task/2428) · 독립 창작 | 투 포인터 응용 | D3 수준 추정 | 복습1 통과 97점·보류 해제 | 복습1 25분 | 평균 O(N) · O(N), Map O(K) |
+| P077 | [희망 크기에 맞는 집 배정](<개인문제풀이/P077. 희망 크기에 맞는 집 배정/README.md>) | [CSES Apartments](https://cses.fi/problemset/task/1084) · 공개 연습(입출력 변형) | 투 포인터 응용 | D3 수준 추정 | 복습1 해설 확인·재보류 | 미보고 | — |
 | P078 | [정확히 고르는 간식](<개인문제풀이/P078. 정확히 고르는 간식/README.md>) | [개념 참고](https://cses.fi/problemset/task/1623) · 독립 창작 | 백트래킹·조합 | D2~D3 수준 추정 | 최초 92점·복습1 통과 96점 | 최초 15분·복습1 15분 | O(2^N) 상한 · O(N) |
-| P079 | [막힌 길을 피해 배송하기](<개인문제풀이/P079. 막힌 길을 피해 배송하기/README.md>) | [공개 연습 원문](https://cses.fi/problemset/task/1638) · 공개 연습(입출력 변형) | DP·경로 수 | D2~D3 수준 추정 | 도움 후 수정 통과 92점·복습 재출제 예정 | 최초 31분·추가 미보고 | O(N²) · O(N²) |
+| P079 | [막힌 길을 피해 배송하기](<개인문제풀이/P079. 막힌 길을 피해 배송하기/README.md>) | [공개 연습 원문](https://cses.fi/problemset/task/1638) · 공개 연습(입출력 변형) | DP·경로 수 | D2~D3 수준 추정 | 최초 통과 92점·복습1 종료(사용자 요청, 마지막 제출 77점) | 최초 31분·복습1 21분 | O(N²) · O(N²) |
 | P080 | [배송 실적이 가장 좋은 구간](<개인문제풀이/P080. 배송 실적이 가장 좋은 구간/README.md>) | [개념 참고](https://cses.fi/problemset/task/1644) · 독립 창작 | 배열·구간 합 | D2 수준 추정 | 통과 97점 | 16분 | O(N) · O(N), 탐색 보조 O(1) |
 | P081 | [전광판 대칭 맞추기](<개인문제풀이/P081. 전광판 대칭 맞추기/README.md>) | [LeetCode 3240](https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-ii/) · 공개 연습 조건 변형 | 2차원 배열·대칭 | D2 수준 추정 | 힌트 후 통과 96점·복습 재출제 예정 | 미보고 | O(HW) · O(HW), 계산 보조 O(1) |
 | P082 | [공동 순위표](<개인문제풀이/P082. 공동 순위표/README.md>) | [AtCoder ABC399 B](https://atcoder.jp/contests/abc399/tasks/abc399_b?lang=en) · 공개 대회 조건 변형 | 배열·집계 | D2 수준 추정 | 통과 96점 | 20분 | O(N log N) · O(N) |
 | P083 | [연속 문자 압축](<개인문제풀이/P083. 연속 문자 압축/README.md>) | [LeetCode 443](https://leetcode.com/problems/string-compression/) · 공개 연습 조건 변형 | 문자열 처리 | D2 수준 추정 | 통과 97점 | 10분 | O(S) · O(1) 보조, 입출력 별도 |
+| P084 | [가장 붐비는 행사장](<개인문제풀이/P084. 가장 붐비는 행사장/README.md>) | [CSES 1619](https://cses.fi/problemset/task/1619) · 공개 연습 조건 변형 | 정렬·시간 구간 | D3 수준 추정 | 해설 확인·복습 보류 | — | — |
+| P085 | [창고 구역별 재고 합계](<개인문제풀이/P085. 창고 구역별 재고 합계/README.md>) | [CSES 1652](https://cses.fi/problemset/task/1652) · 공개 연습 조건 변형 | 격자·구간 합 | D3 수준 추정 | 수정 후 통과 95점·복습 보류 | 최초 17분 · 수정 시간 미기재 | O(HW + Q) · O(HW), 출력 버퍼 별도 |
+| P086 | [빈 줄을 접은 전시판](<개인문제풀이/P086. 빈 줄을 접은 전시판/README.md>) | [AtCoder ABC213 C](https://atcoder.jp/contests/abc213/tasks/abc213_c) · 공개 연습 형식 변형 | 좌표 압축 | D3 수준 추정 | 재제출 오답·수정 대기 | 최초 20분 · 수정 시간 미기재 | O(N log N) 기대 · O(N), 출력 버퍼 별도 |
 | P087 | [두 개의 숫자열](<개인문제풀이/P087. 두 개의 숫자열/README.md>) | [SWEA 1959](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpoFaAS4DFAUq) · 공개 연습 | 배열·완전탐색 | D2 | 수정 후 통과 97점·복습 대상 | 최초 18분 · 수정 시간 미기재 | O(NM) · O(N+M), 출력 버퍼 별도 |
 | P088 | [초심자의 회문 검사](<개인문제풀이/P088. 초심자의 회문 검사/README.md>) | [SWEA 1989](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PyTLqAf4DFAUq) · 공개 연습 | 문자열 | D2 | 통과 96점 | 4분 | O(L) · O(L), 출력 버퍼 별도 |
 | P089 | [패턴 마디의 길이](<개인문제풀이/P089. 패턴 마디의 길이/README.md>) | [SWEA 2007](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5P1kNKAl8DFAUq) · 공개 연습 | 문자열·반복 패턴 | D2 | 수정 후 통과 94점·복습 대상 | 최초 13분 · 수정 시간 미확인 | O(KL) · O(L), 출력 버퍼 별도 |
@@ -92,6 +105,7 @@ Java로 카카오 채용 코딩테스트와 SSAFY SW 역량 평가를 준비한�
 | P091 | [수도 요금 경쟁](<개인문제풀이/P091. 수도 요금 경쟁/README.md>) | [SWEA 1284](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV189xUaI8UCFAZN) · 공개 연습 | 조건문·산술 | D2 Attack | 통과 98점 | 8분 | O(1) · O(1), 케이스당 및 출력 버퍼 별도 |
 | P092 | [농작물 수확하기](<개인문제풀이/P092. 농작물 수확하기/README.md>) | [SWEA 2805](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV7GLXqKAWYDFAXB) · 공개 연습 | 격자·구간 계산 | D3 | 통과 96점 | 31분 | O(N²) · O(N²), 출력 버퍼 별도 |
 | P093 | [View](<개인문제풀이/P093. View/README.md>) | [SWEA 1206](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV134DPqAA8CFAYh) · 공개 연습 | 배열·이웃 비교 | D3 | 수정 후 통과 93점·복습 대상 | 최초 29분 · 수정 시간 미기재 | O(N) · O(N) |
+| P094 | [암호생성기](<개인문제풀이/P094. 암호생성기/README.md>) | [SWEA 1225](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14uWl6AF0CFAYD) · 공개 연습 | 비공개 | D3 | SWEA 공식 Pass · 로컬 21개 중 1개 실패 | 15분 | — |
 | P095 | [Flatten](<개인문제풀이/P095. Flatten/README.md>) | [SWEA 1208](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV139KOaABgCFAYh) · 공개 연습 | 배열·시뮬레이션 | D3 | 통과 95점 | 17분 | O(DN) · O(N), 출력 버퍼 별도 |
 | P096 | [진기의 최고급 붕어빵](<개인문제풀이/P096. 진기의 최고급 붕어빵/README.md>) | [SWEA 1860](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5LsaaqDzYDFAXc) · 공개 연습 | 정렬·시뮬레이션 | D3 | 수정 후 통과 94점·복습 대상 | 최초 25분 · 수정 시간 미확인 | O(N log N + A) · O(N), 출력 버퍼 별도 |
 | P097 | [스도쿠 검증](<개인문제풀이/P097. 스도쿠 검증/README.md>) | [SWEA 1974](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5Psz16AYEDFAUq) · 공개 연습 | 배열·집합 | D2 | 수정 후 통과 95점·복습 대상 | 최초 19분 · 수정 시간 미기재 | O(1) · O(1), 케이스당 및 출력 버퍼 별도 |
@@ -99,7 +113,17 @@ Java로 카카오 채용 코딩테스트와 SSAFY SW 역량 평가를 준비한�
 | P099 | [시각 덧셈](<개인문제풀이/P099. 시각 덧셈/README.md>) | [SWEA 1976](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PttaaAZIDFAUq) · 공개 연습 | 산술·나머지 | D2 | 통과 96점 | 11분 | 케이스당 O(1) · O(1), 출력 버퍼 별도 |
 | P100 | [날짜 계산기](<개인문제풀이/P100. 날짜 계산기/README.md>) | [SWEA 1948](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PnnU6AOsDFAUq) · 공개 연습 | 배열·날짜 계산 | D2 | 통과 97점 | 11분 | 케이스당 O(1) · O(1), 출력 버퍼 별도 |
 | P101 | [햄버거 다이어트](<개인문제풀이/P101. 햄버거 다이어트/README.md>) | [SWEA 5215](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWT-lPB6dHUDFAVT) · 공개 연습 | 백트래킹 | D3 | 통과 97점 | 17분 | O(2^N) · O(N), 출력 버퍼 별도 |
+| P102 | [Sum](<개인문제풀이/P102. Sum/README.md>) | [SWEA 1209](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV13_BWKACUCFAYh) · 공개 연습 | 비공개 | D3 | 로컬 110개 중 5개 실패 · 수정 대기 | 미확인 | — |
 | P103 | [회문1](<개인문제풀이/P103. 회문1/README.md>) | [SWEA 1215](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14QpAaAAwCFAYi) · 공개 연습 | 문자열·격자 | D3 | 수정 후 통과 94점·복습 대상 | 최초 35분 · 수정 시간 미기재 | 케이스당 O(1) · O(1) |
+| P104 | [Magnetic](<개인문제풀이/P104. Magnetic/README.md>) | [SWEA 1220](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15FZuqAL4CFAYD) · 공개 연습 | 비공개 | D3 | 미제출 보류 | — | — |
+| P105 | [중간 평균값 구하기](<개인문제풀이/P105. 중간 평균값 구하기/README.md>) | [SWEA 1984](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5Pw_-KAdcDFAUq) · 공개 연습 | 비공개 | D2 | 사용자 기준 완료 · SWEA 공식 채점 미확인 | 10분 | 케이스당 O(1) · O(1), 출력 버퍼 별도 |
+| P106 | [지그재그 숫자](<개인문제풀이/P106. 지그재그 숫자/README.md>) | [SWEA 1986](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PxmBqAe8DFAUq) · 공개 연습 | 반복문·누적 | D2 | 통과 95점 | 5분 | 케이스당 O(N) · O(1), 출력 버퍼 별도 |
+| P107 | [조교의 성적 매기기](<개인문제풀이/P107. 조교의 성적 매기기/README.md>) | [SWEA 1983](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PwGK6AcIDFAUq) · 공개 연습 | 정렬·순위 | D2 | 통과 96점 | 33분 | O(N log N) · O(N), 출력 버퍼 별도 |
+| P108 | [최빈수 구하기](<개인문제풀이/P108. 최빈수 구하기/README.md>) | [SWEA 1204](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV13zo1KAAACFAYh) · 공개 연습 | 배열·빈도 집계 | D2 | 통과 96점 | 7분 | 케이스당 O(1) · O(1), 출력 버퍼 별도 |
+| P109 | [간단한 압축 풀기](<개인문제풀이/P109. 간단한 압축 풀기/README.md>) | [SWEA 1946](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PmkDKAOMDFAUq) · 공개 연습 | 문자열·출력 형식 | D2 | 통과 96점 | 15분 | 케이스당 O(L) · 보조 O(1), 출력 버퍼 별도 |
+| P110 | [String](<개인문제풀이/P110. String/README.md>) | [SWEA 1213](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14P0c6AAUCFAYi) · 공개 연습 | 문자열 탐색 | D3 | 수정 후 통과 89점·복습 대상 | 최초 10분 · 수정 시간 미확인 | 최악 O(L²) · O(L), 케이스당 |
+| P111 | [비밀번호](<개인문제풀이/P111. 비밀번호/README.md>) | [SWEA 1234](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14_DEKAJcCFAYD) · 공개 연습 | 문자열·스택 | D3 | 통과 88점·해설 후 복습 대상 | 20분 | 제출 O(N²) · O(N), 개선 O(N) · O(N) |
+| P112 | [퍼펙트 셔플](<개인문제풀이/P112. 퍼펙트 셔플/README.md>) | [SWEA 3499](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWGsRbk6AQIDFAVW) · 공개 연습 | 배열·교차 순회 | D3 | 로컬 통과 94점 | 13분 | 케이스당 O(N) · O(N), 이름 길이 상한 및 출력 버퍼 별도 |
 | P113 | [길찾기](<개인문제풀이/P113. 길찾기/README.md>) | [SWEA 1219](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14geLqABQCFAYD) · 공개 연습 | BFS | D4 | 수정 후 통과 91점·복습 대상 | 최초 20분 · 수정 시간 미확인 | O(V+E) · O(V+E) |
 | P114 | [미로1](<개인문제풀이/P114. 미로1/README.md>) | [SWEA 1226](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14vXUqAGMCFAYD) · 공개 연습 | 격자 BFS | D4 | 로컬 통과 94점 | 15분 | 일반화 O(H×W) · O(H×W) |
 
