@@ -1,170 +1,133 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-class Command{
-  char command;
-  int num;
-
-  public Command(char command, int num){
-    this.command = command;
-    this.num = num;
-  }
-}
 public class P147 {
-  private static void commandProcess(Command command, int[][] map){
-    int h = map.length;
-    int w = map[0].length;
-    int idx = command.num-1;
-    int temp;
+    private static void applyGravity(int[][] map){
+        int h = map.length;
+        int w= map[0].length;
 
-    switch(command.command){
-      case 'H':
-        temp = map[idx][w-1];
-        for(int col=w-1; col>0; col--){
-          map[idx][col] = map[idx][col-1];
+        for(int col=0; col<w; col++){
+            int writeRow=h-1;
+            for(int readRow=h-1; readRow>=0; readRow--){
+                if(map[readRow][col]!=0){
+                    map[writeRow][col]=map[readRow][col];
+                    writeRow--;
+                }
+            }
+            while(writeRow>=0){
+                map[writeRow][col]=0;
+                writeRow--;
+            }
         }
-        map[idx][0]=temp;
-        break;
-      case 'V':
-        temp = map[h-1][idx];
-        for(int row=h-1; row>0; row--){
-          map[row][idx] = map[row-1][idx];
-        }
-        map[0][idx]=temp;
-        break;
     }
-  }
-
-  private static void applyGravity(int[][] map){
-    int h = map.length;
-    int w= map[0].length;
-
-    for(int col=0; col<w; col++){
-      int writeRow = h-1;
-
-      for(int readRow=h-1; readRow>=0; readRow--){
-        if(map[readRow][col]!=0){
-          map[writeRow][col] = map[readRow][col];
-          writeRow--;
-        }
-      }
-      while(writeRow>=0){
-        map[writeRow][col]=0;
-        writeRow--;
-      }
-    }
-  }
-
-  private static void process(int[][] map, Command[] commands, int count,StringBuilder sb){
-    int removedCount=0;
-    int h = map.length;
-    int w= map[0].length;
-
-    for(Command command : commands){
-      //명령 처리
-      commandProcess(command, map);
-
-      //반복
-      while(true){
-        int removedRow=0;
-        //같은 행 삭제
-        for(int row=0; row<h; row++){
-          int col=0;
-          int color = map[row][col];
-
-          if(color==0){
-            continue;
-          }
-
-          while(col<w && map[row][col]==color){
-            col++;
-          }
-
-          if(col==w){
-            Arrays.fill(map[row],0);
-            removedRow++;
-          }
-        }
-
-        //삭제한 행 없으면 종료
-        if(removedRow==0){
-          break;
-        }
-
-        //삭제한 행 있다면 아래로 떨어뜨리기
-        applyGravity(map);
-        removedCount += removedRow*w;
-      }
-    }
-
-    sb.append(removedCount).append(" ").append(count-removedCount).append("\n");
-  }
-  public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
     /*
-    1. 11:20 시작 ~ 11:00 종 료
+    1.13:35 시작 ~ 14:10
     시뮬레이션 문제
-    (1) 명령 수행
-    걍 명령 수행 제일 마지막에 있는 값 미리 저장해두고
-    i=1; i<n; i++까지 현재 값에 전에 값 대입
-    마지막에 마지막에 있는 값은 저장해둔 값 대입
+    명령 수행 H 행 제거 V 열 제거
 
-    (2) 작업 반복
-    boolean isRemove=false;
+    명령 수행 후
+    removedRow=0
+    do{
+    removedRow=0;
+        1. 모든 행 확인 모든 열이 같으면 삭제(removedCount++) 아니라면 다르면 패스
+        2. 삭제한 행이 있으면 아래로 떨어뜨리기
+    }while(removedCount>0)
 
-    while(true){
-      1. 각 행 돌면서 삭제할 수 있는 행 있나 확인
-      2. 삭제할 행 있다면 is Remove=true;
-
-      if(!isRemove){
-        제일 밑에서부터 채워가면서 만약 현재 값이 0 이면 그 위에 row값 범위 안 벗어나면 가져오고 해당 값은 0으로 갱신
-        break;
-      }
-    }
-
-    2. 행 없다면 패스
-    3. 행 있다면
 
     2. 시간 & 공간 복잡도
-    시간 복잡도 : O(NQ) :
-    공간 복잡도 : O(N+Q) :
+    시간 복잡도 : O(Q*H*W) :
+    공간 복잡도 : O(H*W) :
 
     3. 자료구조
-    Box[] boxes
-    PriorityQueue<Order>
+    int[][] map
     */
-    Scanner sc = new Scanner(System.in);
-    StringBuilder sb = new StringBuilder();
-    int t= sc.nextInt();
 
-    for(int test_case=1; test_case<=t; test_case++){
-      int h =  sc.nextInt();
-      int w =  sc.nextInt();
-      int q =   sc.nextInt();
-      int[][] map =new int[h][w];
-      int count=0;
 
-      for(int row=0; row<h; row++){
-        for(int col=0; col<w; col++){
-          int value = sc.nextInt();
-          if(value!=0){
-            count++;
-          }
-          map[row][col] = value;
+        Scanner sc = new Scanner(System.in);
+        StringBuilder sb = new StringBuilder();
+        int t = sc.nextInt();
+
+        for(int test_case=1; test_case<=t; test_case++){
+            int h = sc.nextInt();
+            int w = sc.nextInt();
+            int q = sc.nextInt();
+            int count =0;
+            int removedCount=0;
+
+            int[][] map = new int[h][w];
+
+            for(int row=0; row<h; row++){
+                for(int col=0; col<w; col++){
+                    int color = sc.nextInt();
+                    if(color!=0){
+                        count++;
+                    }
+                    map[row][col] = color;
+                }
+            }
+
+            for(int i=0; i<q; i++){
+                char command = sc.next().charAt(0);
+                int num =  sc.nextInt()-1;
+
+                switch(command){
+                    case 'H' ->{
+                        int temp = map[num][w-1];
+                        for(int col=w-1; col>0; col--){
+                            map[num][col] = map[num][col-1];
+                        }
+                        map[num][0]=temp;
+                    }
+
+                    case 'V' ->{
+                        int temp = map[h-1][num];
+                        for(int row=h-1; row>0; row--){
+                            map[row][num] = map[row-1][num];
+                        }
+                        map[0][num]=temp;
+                    }
+                }
+
+
+                //삭제할 열 확인
+                while(true){
+                    int removedRow=0;
+                    for(int row=0; row<h; row++){
+                        boolean isRemoved = true;
+
+                        int color = map[row][0];
+
+                        if(color==0){
+                            continue;
+                        }
+
+                        for(int col=1; col<w; col++){
+                            if(map[row][col]!=color){
+                                isRemoved = false;
+                                break;
+                            }
+                        }
+                        if(isRemoved){
+                            Arrays.fill(map[row], 0);
+                            removedRow++;
+                        }
+                    }
+
+                    if(removedRow>0){
+                        applyGravity(map);
+                        removedCount+=(removedRow*w);
+                    }else{
+                        break;
+                    }
+                }
+            }
+
+
+            sb.append("#").append(test_case).append(" ")
+                    .append(removedCount).append(" ")
+                    .append(count-removedCount).append("\n");
         }
-      }
-
-      Command[] commands = new Command[q];
-      for(int i=0; i<q; i++){
-        char c = sc.next().charAt(0);
-        int num = sc.nextInt();
-        commands[i] = new Command(c,num);
-      }
-
-      sb.append("#").append(test_case).append(" ");
-      process(map,commands,count, sb);
-    }
-    System.out.print(sb.toString());
-
-
+        System.out.print(sb.toString());
   }
 }
