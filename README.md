@@ -39,7 +39,7 @@ Java로 카카오 채용 코딩테스트와 SSAFY SW 역량 평가를 준비한�
 | P025 | [크레인 인형뽑기 게임](<개인문제풀이/P025. 크레인 인형뽑기 게임/README.md>) | [프로그래머스 64061](https://school.programmers.co.kr/learn/courses/30/lessons/64061) · 2019 카카오 겨울 인턴십 공개 기출 | 시뮬레이션·격자 상태 변경 | 기초 응용 | 통과98점 | 20분 | O(CN) · O(C) |
 | P026 | [숫자의 표현](<개인문제풀이/P026. 숫자의 표현/README.md>) | [프로그래머스 12924](https://school.programmers.co.kr/learn/courses/30/lessons/12924) · 일반 공개 연습 | 투 포인터·연속 구간 합 | 입문 | 통과98점 | 수정10분 | O(n) · O(1) |
 | P027 | [연속된 부분 수열의 합](<개인문제풀이/P027. 연속된 부분 수열의 합/README.md>) | [프로그래머스 178870](https://school.programmers.co.kr/learn/courses/30/lessons/178870) · 일반 공개 연습 | 투 포인터·최단 구간 | 기초 응용 | 통과97점 | 25분 | O(N) · O(1) |
-| P028 | [구명보트](<개인문제풀이/P028. 구명보트/README.md>) | [프로그래머스 42885](https://school.programmers.co.kr/learn/courses/30/lessons/42885) · 일반 공개 연습 | 정렬·투 포인터·그리디 | 기초 응용 | 통과95점 | 40분 초과 | O(N log N) · O(N) |
+| P028 | [구명보트](<개인문제풀이/P028. 구명보트/README.md>) | [프로그래머스 42885](https://school.programmers.co.kr/learn/courses/30/lessons/42885) · 일반 공개 연습 | 정렬·투 포인터·그리디 | 기초 응용 | 통과95점 · 복습 완료95점 | 최초40분 초과 · 복습10분 | O(N log N) · O(N) |
 | P029 | [두 수의 합을 0에 가깝게](<개인문제풀이/P029. 두 수의 합을 0에 가깝게/README.md>) | [BOJ2470 참고](https://www.acmicpc.net/problem/2470) · 공개 연습 기반 함수형 변형 | 정렬·투 포인터·최솟값 | 기초 응용 | 통과96점 | 15분 | O(N log N) · O(N)(정렬 포함 최악) |
 | P030 | [정렬된 배열에서 값 찾기](<개인문제풀이/P030. 정렬된 배열에서 값 찾기/README.md>) | [개념 참고](https://cp-algorithms.com/num_methods/binary_search.html) · 독립 창작 | 이진 탐색 | 입문 | 수정 통과95점 | 최초30분·추가미보고 | O(log N) · O(log N)(재귀) |
 | P031 | [target 이상인 첫 위치](<개인문제풀이/P031. target 이상인 첫 위치/README.md>) | [개념 참고](https://cp-algorithms.com/num_methods/binary_search.html#lower-bound-and-upper-bound) · 독립 창작 | 이진 탐색·경계 탐색 | 기초 응용 | 힌트 후 통과97점 | 30분 | O(log N) · O(log N)(재귀) |
