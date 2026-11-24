@@ -17,7 +17,7 @@ Java로 카카오 채용 코딩테스트와 SSAFY SW 역량 평가를 준비한�
 | P003 | [K번째수](problems/P003.md) | [프로그래머스 42748](https://school.programmers.co.kr/learn/courses/30/lessons/42748) · 일반 공개 연습 | 배열·정렬·인덱스 | 기초+ | 코드 검증 통과·학습 보류 76점 | 8분 | O(m n log(n+1)) · O(n+m) |
 | P004 | [실패율](<개인문제풀이/P004. 실패율/README.md>) | [카카오 2019 공채](https://school.programmers.co.kr/learn/courses/30/lessons/42889) · 공개 기출 | 집계·정렬 | 실전 입문 | 로컬 검증 통과 · 82점 | 20분 | O(M log(N+1)+N log(N+1)) · O(N) |
 | P005 | [캐시](<개인문제풀이/P005. 캐시/README.md>) | [카카오 공채](https://school.programmers.co.kr/learn/courses/30/lessons/17680) · 공개 기출 | 문자열·시뮬레이션 | 실전 기초 | 로컬 검증 통과 · 86점 | 20분 | O(MC) · O(C), C>0・문자열 길이 고정 |
-| P006 | [소수 찾기](<개인문제풀이/P006. 소수 찾기/README.md>) | [프로그래머스 42839](https://school.programmers.co.kr/learn/courses/30/lessons/42839) · 일반 공개 연습 | 완전탐색·소수 판별 | 중급 입문 | 해설 확인·재도전 예정(미통과) | — | — |
+| P006 | [소수 찾기](<개인문제풀이/P006. 소수 찾기/README.md>) | [프로그래머스 42839](https://school.programmers.co.kr/learn/courses/30/lessons/42839) · 일반 공개 연습 | 완전탐색·소수 판별 | 중급 입문 | 복습 통과92점 · 재복습 대상 | 복습20분 | O(L!·(L+√V)) / O(P+L²) |
 | P007 | [네트워크](<개인문제풀이/P007. 네트워크/README.md>) | [프로그래머스 43162](https://school.programmers.co.kr/learn/courses/30/lessons/43162) · 일반 공개 연습 | 그래프·BFS | BFS 입문 | 복습1 보류(55점·해설 확인) | 복습1 14분 | 제출 O(N²) · O(N²) |
 | P008 | [연결된 방 찾기](<개인문제풀이/P008. 연결된 방 찾기/README.md>) | [공개 연습 참고](https://school.programmers.co.kr/learn/courses/30/lessons/43162) · 창작(기출 아님) | BFS 기본 탐색 | BFS 첫 연습 | 로컬 검증 통과 · 89점 | 20분 | O(V+E) · O(V) |
 | P009 | [방 방문 순서](<개인문제풀이/P009. 방 방문 순서/README.md>) | 창작(기출 아님) | BFS·방문 순서 | BFS 첫 연습 | 로컬 검증 통과 · 97점 | 약 10분 | O(V+E) · O(V) |
